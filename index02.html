@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Local Color</title>
+		
+		<meta name="viewport" content="The HTML5 Los Angeles Multculture">
+		<link rel="stylesheet" type="text/css" href="css/author.css">
+		<link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" href="js/modernizr.custom.67437.js"></script>
+		<script type="text/javascript" href="js/modernizr.custom.77443.js"></script>
+		<style type="text/css">
+		 </style>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>Culture-Finder Logo</h1>
+					<nav>
+						<a href="#main" class="theOne">Home</a>
+						<a href="#cultures">Cultures</a>
+						<a href="#explore">Explore</a>
+						<a href="#about">About Us</a>
+						<a href="#today">Contact</a>
+					</nav>
+			</header>
+			<div id="topbar" class="fullwidth">
+				<div class="inset">
+					<div class="left">Download our App! <b>Read all about why</b></div>
+					<div class="right"><b>Add events</b> Click here</div>
+				</div>
+			</div>
+			<section id="main">
+				  <div class="slides">
+				 	    <img src="images/">
+				 		<img src="images/image02.jpg">
+				 		<img src="images/image03.jpg">
+				 		<img src="images/image04.jpg">
+					</div> 
+				<!-- slideshow controls -->
+			</section>		
+			<section id="cultures">
+				<div class="inset">
+					<h1>Cultures </h1><!-- filters --><!-- a -z index -->
+					<a class="call2action" href="http://apple.com/" target="_blank">
+						<img src="images/image1.jpg"> 
+						<h1>Mexican</h1>
+					</a>
+					<a class="call2action" href="http://apple.com/" target="_blank">
+						<img src="images/image2.jpg"> 
+						<h1>Korean</h1>
+					</a>
+					<br>
+					<a class="call2action" href="http://apple.com/" target="_blank">
+						<img src="images/image3.jpg"> 
+						<h1>Native American</h1>
+					</a>
+					<a class="call2action" href="http://apple.com/" target="_blank">
+						<img src="images/image4.jpg"> 
+						<h1>Armenian</h1>
+					</a>
+				</div>
+			</section>
+			<section id="explore">
+				<div class="inset">
+					<h1>Explore Events</h1>
+					<!-- filters -->
+					<!-- a -z index -->
+				</div>
+			</section>
+			<section id="about">
+				<div class="inset">
+					<h1>About Us</h1>
+			
+				</div>
+			</section>
+			<section id="contact">
+				<div class="inset">
+					<h1>Contact</h1>
+					<!-- filters -->
+					<!-- a -z index -->
+				</div>
+			</section>
+			<footer>
+				<div class="inset">&copy; 2014 breaking hearts with my lightning farts</div>
+			</footer>
+		</div>
+	</body>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+		<script type="text/javascript" src="js/author.js"></script>
+	<script type="text/javascript">
+
+	//1.
+	$(document).ready(setSLIDEup);
+
+	//2.
+	 function setSLIDEup() {
+		slideTheSlides();
+	}
+
+	//3
+	 function slideTheSlides() {
+		var theLast = $('.slides img:last');
+
+
+		theLast.animate({'opacity':'0'},1000,function(){
+			theLast.prependTo('.slides');
+			theLast.css({'opacity':'1'});
+
+		setTimeout(slideTheSlides,3000);
+	});
+	}
+
+
+
+	</script>	
+
+</html>
